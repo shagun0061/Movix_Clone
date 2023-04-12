@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import { fetchDataFromApi } from "./utils/api.js";
+import "./App.css";
+import { getApiConfiguration, getGenres } from "./store_📅/homeSlice.js";
+import { useDispatch, useSelector } from "react-redux";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Home from "./Page/home/Home";
+import Details from "./Page/detail/Detail";
+import SearchResult from "./page/searchReasult/SearchResult";
+import Explore from "./page/explores/Explore";
+import PageNotFound from "./page/404/PageNotFound";
 
 function App() {
-  const [count, setCount] = useState(0)
+  let dispatch = useDispatch();
 
+  let url = useSelector((store) => {
+    return store.home;
+  });
+ 
+
+  const testing = () => {
+    fetchDataFromApi("/movie/popular").then((res) => {
+      dispatch(getApiConfiguration(res));
+    });
+  };
+
+  useEffect(() => {
+    testing();
+  }, []);
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* <Header /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/:mediaType/:id" element={<Details />} />
+          <Route path="/search/:query" element={<SearchResult />} />
+          <Route path="/explore/:mediaType" element={<Explore />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <Footer /> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
