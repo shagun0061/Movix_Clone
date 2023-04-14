@@ -9,12 +9,13 @@ const headers = {
 };
 
 export const fetchDataFromApi = async (url, params) => {
-  console.log("chall");
+   
       try {
-    const { data } = await axios.get(BASE_URL + url + Key, {
+    const { data } = await axios.get(BASE_URL + url, {
       headers,
       params,
     });
+     
     return data;
   } catch (err) {
     console.log("Error in api.js file", err);

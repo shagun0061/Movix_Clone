@@ -19,7 +19,6 @@ function App() {
   let url = useSelector((store) => {
     return store.home;
   });
- 
 
   const testing = () => {
     fetchDataFromApi("/movie/popular").then((res) => {
@@ -32,8 +31,8 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {/* <Header /> */}
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:mediaType/:id" element={<Details />} />
@@ -41,8 +40,8 @@ function App() {
           <Route path="/explore/:mediaType" element={<Explore />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      {/* <Footer /> */}
     </div>
   );
 }
