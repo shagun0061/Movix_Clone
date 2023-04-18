@@ -9,8 +9,11 @@ TechStack:
 2. React-Router-Dom
 3. Redux-ToolKit
 4. Scss
-5. Day JS (npm package for formatiing date)
+5. Day JS (npm package for formatiing date) 
 6. react-circular-progressbar (for rating progress)
+7. react-player  (npm package for play movies Trailer Video's) 
+8. react-infinite-scroll-component  (npm package for infinite Scroll) 
+
 
 ----------------Contents of Web-Site------------------------
 
