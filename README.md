@@ -1,5 +1,5 @@
 # Movix 
-Movix is  clone of hotStar . It is a most UI based  website using HTML SCSS & Javascript,React
+Movix is clone of hotStar.com . It is a most UI based  website using HTML SCSS & Javascript & React
 
 Team members: 
 1. Shaguin Sharma
@@ -14,34 +14,26 @@ TechStack:
 
 ----------------Contents of Web-Site------------------------
 
-1. Home Page
+1. Navbar
+![Navbar_movix](https://user-images.githubusercontent.com/103635167/232764926-4559386d-14c8-419a-89ff-6ead50322474.PNG)
 
-![home page](https://user-images.githubusercontent.com/103627954/174476202-6cc735bc-13ea-48dc-bd15-212e647b488a.png)
+2. Home Page
+ ![image](https://user-images.githubusercontent.com/103635167/232765330-77dabfb9-0d0e-4410-834d-7fc387c9a48b.png)
+ ![image](https://user-images.githubusercontent.com/103635167/232765653-fc35e5f6-c9fc-40a9-970e-ffd7d3e8f501.png)
+ ![image](https://user-images.githubusercontent.com/103635167/232765932-635cf0ff-a242-48ff-919a-e962a24479e3.png)
+ ![image](https://user-images.githubusercontent.com/103635167/232766032-3807966f-da7f-47f3-8520-fef106da3dd7.png)
 
-2. Bodycare Page
+3.Search Page
+![image](https://user-images.githubusercontent.com/103635167/232766446-2f9b821f-707c-46d9-b7ab-0389db6b0f68.png)
 
-![body care](https://user-images.githubusercontent.com/103627954/174476255-b7fedb84-6685-41cd-9a0a-03baac5d7098.png)
+4. Explore Page
+![image](https://user-images.githubusercontent.com/103635167/232766872-0d0e6062-72e7-440b-b2f7-5fe6f2673043.png)
 
-3. Haircare Page
+5. Detail Page
+![image](https://user-images.githubusercontent.com/103635167/232767022-df4903cc-9af5-4a86-8db7-6590a841ffa4.png)
+![image](https://user-images.githubusercontent.com/103635167/232767218-3cd1f32d-50d6-40dd-805f-1f57f6bbea7f.png)
+![image](https://user-images.githubusercontent.com/103635167/232767349-485af911-e50e-4c19-8437-88daea6663ce.png)
 
-![hair care](https://user-images.githubusercontent.com/103627954/174476270-2f9f2c14-b44e-46fa-809a-f42617fb4ecf.png)
 
-4. Nutritiion Page
-
-![nutrition page](https://user-images.githubusercontent.com/103627954/174476278-d9e3575f-38d6-41e7-9268-be90a2aac6be.png)
-
-5. Serum Page
-
-![serum Page](https://user-images.githubusercontent.com/103627954/174476288-fbf5b414-052f-411e-9aa3-0515a15d404f.png)
-
-6. Moisturizer Page
-
-![moisturizer page](https://user-images.githubusercontent.com/103627954/174476294-1ea7682a-39ba-498f-9978-c248843ab7f8.png)
-
-7. Cart Page
-
-![cart Page](https://user-images.githubusercontent.com/103627954/174476310-2127486c-2b2f-46e2-a905-2680ad56d320.png)
-
-8. SignUp Page
-
-![signup page](https://user-images.githubusercontent.com/103627954/174476327-6c2aefd1-0c99-4724-aa0e-583e2fadaef5.png)
+3.Footer
+![image](https://user-images.githubusercontent.com/103635167/232766206-a576758d-e305-40f3-ae96-f50feb8b816a.png)
