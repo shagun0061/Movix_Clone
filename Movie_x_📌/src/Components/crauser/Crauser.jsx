@@ -35,7 +35,10 @@ const Carousel = ({ data, loading, endpoint, title }) => {
       behavior: "smooth",
     });
   };
-
+ console.log(data);
+  if (data&&data.length<1) {
+    return <></>;
+  }
   const skItem = () => {
     return (
       <div className="skeletonItem">

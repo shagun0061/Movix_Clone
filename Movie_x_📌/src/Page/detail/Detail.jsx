@@ -1,13 +1,29 @@
 import React from "react";
-import DetailsBanner from "./detailBanner/DetailBanner";
+import { useParams } from "react-router-dom";
 import "./style.scss";
 
-const Detail = () => {
-  return (
-    <div>
-      <DetailsBanner />
-    </div>
-  );
+import useFetch from "../../hook/useFetch";
+import DetailsBanner from "./detailBanner/DetailBanner";
+import Cast from "./cast/Cast";
+import VideosSection from "./videosSection/VideosSection";
+import Similar from "./crauser/Similar";
+import Recommendation from "./crauser/Recommendation";
+const Details = () => {
+    const { mediaType, id } = useParams();
+    const { data, loading } = useFetch(`/${mediaType}/${id}/videos`);
+    const { data: credits, loading: creditsLoading } = useFetch(
+        `/${mediaType}/${id}/credits`
+    );
+
+    return (
+        <div>
+            <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
+            <Cast data={credits?.cast} loading={creditsLoading} />
+            <VideosSection data={data} loading={loading} />
+            <Similar mediaType={mediaType} id={id} />
+            <Recommendation mediaType={mediaType} id={id} />
+        </div>
+    );
 };
 
-export default Detail;
+export default Details;
